@@ -1,0 +1,68 @@
+    ***
+    An unwanted event/unexpected event occurs during the execution/run time of program.
+
+    ***
+    Error ==> Run time
+    Exception ==> Run time
+
+    ***
+    Exception Handling ==> A mechanism to handle Run time error
+
+    ***
+                                                    object
+                                                      ||
+                                                   Throwable
+                                                      ||
+                             =====================================================
+                             ||                                                  ||
+                         Exception                                               Error
+    (Used to handle exceptional condition) (Can be Handled)         (VM & assertion error) (Can not Handled)
+                             ||                                                 (System Resources)
+             =======================================
+            ||                                    ||
+         Checked                               Unchecked
+ (Compile time & I/O exception)   (Run time & Null pointer exception)
+ (SQL, class not found, etc)      (Arithmetic, index Out of (Array))
+                                        (string out of bound)
+                                    (Class definition not found)
+                                        (Method not found)
+                                        (Created By user)
+
+ ***
+
+ 5 keywords for exception handling
+
+    1.  try
+    2.  catch
+    3.  finally
+    4.  throw
+    5.  throws
+
+ ***
+
+ 1. try
+
+
+ try{
+ //exception code
+ }
+ catch(exceptionClassName objectName){
+ //code
+ }
+
+ ***    if exception is known
+ try{
+ string name = null
+ }
+ catch(nullPointer e){
+ //msg for user
+ }
+
+
+ ***    if exception is unknown
+ try{
+ string name = null
+ }
+ catch(exception e){
+ //msg for user
+ }
