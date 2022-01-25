@@ -7,6 +7,7 @@ public class Employee {
     private static String name;
     private static String department;
     private static long salary;
+    protected long getSalary;
 //    long temp;
 
     void display(){

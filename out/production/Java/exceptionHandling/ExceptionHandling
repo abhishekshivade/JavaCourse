@@ -23,7 +23,7 @@
          Checked                               Unchecked
  (Compile time & I/O exception)   (Run time & Null pointer exception)
  (SQL, class not found, etc)      (Arithmetic, index Out of (Array))
-                                        (string out of bound)
+                                        (demoString out of bound)
                                     (Class definition not found)
                                         (Method not found)
                                         (Created By user)
@@ -52,7 +52,7 @@
 
  ***    if exception is known
  try{
- string name = null
+ demoString name = null
  }
  catch(nullPointer e){
  //msg for user
@@ -61,7 +61,7 @@
 
  ***    if exception is unknown
  try{
- string name = null
+ demoString name = null
  }
  catch(exception e){
  //msg for user
