@@ -28,7 +28,6 @@ public class Person {
         System.out.println("Enter Email Id");
         emailId = sc.nextLine();
 
-        sc.close();
     }
 
     void validate() throws Exception {
@@ -54,8 +53,10 @@ public class Person {
             emailId = emailId.trim();
 
             if (emailId.contains("@")) {
-                if (!emailId.contains(".com") || !emailId.contains(".in")) {
-                    throw new Exception("Invalid Email Id");
+                if (!emailId.contains(".com")){
+                    if (!emailId.contains(".in")) {
+                        throw new Exception("Invalid Email Id");
+                    }
                 }
             } else {
                 throw new Exception("Invalid Email Id");

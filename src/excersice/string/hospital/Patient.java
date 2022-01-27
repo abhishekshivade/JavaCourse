@@ -21,7 +21,6 @@ public class Patient extends Person{
         patientId = sc.nextLine();
         validate();
         display();
-        sc.close();
     }
 
     @Override
@@ -31,11 +30,11 @@ public class Patient extends Person{
         if (!patientId.isBlank()){
             patientId = patientId.trim();
 
-            if (!patientId.startsWith("D-")){
-                throw new Exception("Invalid Doctor Id");
+            if (!patientId.startsWith("P-")){
+                throw new Exception("Invalid Patient Id");
             }
         } else{
-            throw new Exception("Invalid Doctor Id");
+            throw new Exception("Invalid Patient Id");
         }
 
         String[] arrStr = fullName.split(" ",3);
@@ -45,9 +44,10 @@ public class Patient extends Person{
     }
 
     void display(){
-        System.out.println("Doctor Name : "+firstName+" "+middleName+" "+lastName);
-        System.out.println("Mobile No   : "+Integer.parseInt(mobileNo));
+        System.out.println("Patient Name : "+firstName+" "+middleName+" "+lastName);
+        System.out.println("Mobile No   : "+Long.parseLong(mobileNo));
         System.out.println("Email Id    : "+emailId);
         System.out.println("Patient Id  : "+patientId);
+        System.out.println("Saved Successfully...!");
     }
 }

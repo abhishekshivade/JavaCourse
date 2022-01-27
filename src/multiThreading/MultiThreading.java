@@ -32,7 +32,42 @@ package multiThreading;
  *    terminate, creation, context switching          terminate, creation, context switching
  *  - More efficient                                - Less efficient
  *  - Isolated (Don't share memory)                 - Shares Memory
- *  -
+ *
+ * LifeCycle of thread
+ *  1. Born (New) -
+ *      - New thread is created.
+ *      - MyThread t1 = new MyThread()
+ *
+ *  2. Runnable -
+ *      - t.start() is used to start a thread.
+ *      - Waiting for resource allocation.
+ *      - Thread Scheduler (part of JVM).
+ *      - Scheduler assigns a fixed amount of time to execute a thread.
+ *
+ *  3. Running -
+ *      -  When thread gets CPU / Memory it starts to run.
+ *
+ *  4. Blocked / Waiting -
+ *      - When thread is inactive for particular time.
+ *      - t.sleep(),t.suspend(),t.wait().
+ *      - After this thread goes to running state.
+ *      - If thread is suspended then we have to resume thread again.
+ *
+ *  5. Dead / Stop -
+ *      - When tread completed its task then it gets terminated / stop.
+ *      - When thread stops abnormally.
+ *
+ * Thread can be created using 2 mechanism
+ *  1. By extending thread class
+ *      - Thread class implements Runnable interface.
+ *      - Thread class located in java.lang package.
+ *      - steps -
+ *          a) extend thread class
+ *          b)
+ *
+ *  2. By implementing runnable interface
+ *      - We can't extend more than one class at a time
+ *      - In these case we implement Runnable interface
  *
  * */
 public class MultiThreading {

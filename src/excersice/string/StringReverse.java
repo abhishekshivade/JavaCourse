@@ -13,8 +13,9 @@ public class StringReverse {
 
     static void abc(String str){
 //        Integer index = str.length();
-//        System.out.println(index);
-        for(Integer index = 0; index <= str.length(); index++){
+//        System.out.println("abc");
+        for(Integer index = str.length()-1; index >= 0; index--){
+//            System.out.println("for loop");
             System.out.print(str.charAt(index));
 //            index--;
         }

@@ -23,10 +23,9 @@ public class Doctor extends Person {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter Doctor Id");
-        doctorId = sc.next();
+        doctorId = sc.nextLine();
         validate();
         display();
-        sc.close();
     }
 
     @Override
@@ -51,9 +50,10 @@ public class Doctor extends Person {
 
     void display(){
         System.out.println("Doctor Name : "+firstName+" "+middleName+" "+lastName);
-        System.out.println("Mobile No   : "+Integer.parseInt(mobileNo));
+        System.out.println("Mobile No   : "+Long.parseLong(mobileNo));
         System.out.println("Email Id    : "+emailId);
         System.out.println("Doctor Id   : "+doctorId);
+        System.out.println("Saved Successfully...!");
     }
 
 
