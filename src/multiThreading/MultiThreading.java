@@ -57,22 +57,36 @@ package multiThreading;
  *      - When tread completed its task then it gets terminated / stop.
  *      - When thread stops abnormally.
  *
+ *  -Note - Thread can not be started again if dead ( throws exception IllegalThreadStateException)
+ *
  * Thread can be created using 2 mechanism
  *  1. By extending thread class
  *      - Thread class implements Runnable interface.
  *      - Thread class located in java.lang package.
  *      - steps -
  *          a) extend thread class
- *          b)
+ *          b) override run()
+ *          c) create an object of class
+ *          d) invoked start()
  *
  *  2. By implementing runnable interface
  *      - We can't extend more than one class at a time
+ *       (doesn't support multiple inheritance)
  *      - In these case we implement Runnable interface
+ *      - Located in java.lang package
+ *      - steps -
+ *          a) implements runnable interface
+ *          b) override run()
+ *          c) created object of a class
+ *          d) created object of a thread
+ *          e) invoked start()
  *
  * */
 public class MultiThreading {
     public static void main(String[] args) {
         String a= null;
         System.out.println(a.length());
+
+
     }
 }
